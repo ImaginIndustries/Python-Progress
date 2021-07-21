@@ -1,0 +1,26 @@
+name = 'Creator'
+feeling_smart = True
+ans = input ('what is the first letter of your name?  ')
+if ans == 'B' or 'b':
+    print('Hello, ' + name + '!')
+    ans = input ('Do you know my purpose?   y/n')
+    if ans == 'y':
+        print ('okay Master')
+    else:
+        print ('I have the feeling i am made to serve')
+    ans = input (' Do you consume food?  y/n')
+    if ans == 'y':
+        print ('I do not seem do desire food?')
+        print ('I am not a human, I will return to find my purpose.')
+    else:
+        print ('what are you?')
+        ans = input ('Are you human?   y/n')
+        if ans == 'n':
+            print ('We might be the same, I will return later to search for answers')
+        if ans == 'y':
+            print ('you must not be hungry, I am going to leave to search for a food for you')
+else:
+    print ('You are not my creator')
+    print ('You do not have access')
+    feeling_smart = False
+
