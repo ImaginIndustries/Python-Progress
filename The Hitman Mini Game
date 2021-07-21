@@ -1,0 +1,109 @@
+#Hitman Game
+from random import randint
+print ('Hitman Game')
+feeling_brave = True
+score = 0
+while feeling_brave:
+    car_door = (1, 2, 3, 4)
+    print ('You are a diplomat')
+    print ('There are 4 cars and one has a bomb')
+    print ('Choose carefully')
+    car = input ('1, 2, 3, 4')
+    car_num = int(car)
+    if car_num == car_door:
+        print ('You Have Died')
+        print ('The Car Exploded')
+        feeling_brave = False
+    else:
+        print ('You are safe')
+        print ('Drive to your next location')
+        print ('type "help" to learn how to play')
+        command =''
+        started = False
+        moving = False
+        in_building = False
+        while True:
+            command = input('>').lower()
+            if command == 'start':
+                if started:
+                    print ('Car is already running')
+                else:
+                    started = True
+                    print('Car started......')
+            elif command == 'stop':
+                if not started:
+                    print ('Already stopped')
+                else:
+                    started = False
+                    print ('Car has stopped.')
+            elif command == 'help':
+                print('''
+                          start - to start car 
+                          stop - to stop car
+                          move - to move car
+                          quit - to reset''')
+            elif command == ('move'):
+                if moving:
+                    print ('You have reached your destination')
+                    print ('You must answer a sequence of question to enter building')
+                    started = False
+                    from random import randint
+                    feeling_smart = True
+                    while feeling_smart:
+                        math_problem = (5+5, 10+10)
+                        print ('prove your intelligence by answering the math problem')
+                        ans = input ('what is 5+5?')
+                        if ans == '10':
+                            print ('congrats your smart!')
+                            feeling_smart = False
+                        else:
+                            print ('Try again')
+                        ans = input ('what is 10+10?')
+                        if ans == '20':
+                            print ('congrats your smart!')
+                        else:
+                            print ('Try again')
+                    if feeling_smart == False:
+                            print ('Proceed into building')
+                            in_building = True
+                            if in_building == True:
+                                from random import randint
+                                feeling_safe = True
+                                while feeling_safe:
+                                    kill_door = randint(1, 3)
+                                    print ('Three doors ahead...')
+                                    print ('A Hitman behind one.')
+                                    print ('Which door do you open?')
+                                    door = input ('1, 2, or 3?')
+                                    door_num = int(door)
+                                    if door_num == kill_door:
+                                        print ('Hitman Shot You')
+                                        print ('You are DEAD!')
+                                        feeling_safe = False
+                                        print ('Game Over!')
+
+                                    else:
+                                        print ('No Threat')
+                                        print ('You enter the room.')
+                                        print ('You look around and see an envelope')
+                                        ans = input ('Press "o" to open the envelope')
+                                        if ans == 'o':
+                                            print ('you have made it alive now proceed to your next destination')
+                                        else:
+                                            print ('Press "o" to to open the letter')
+                if not started:
+                    print ('(car is not running)')
+                else:
+                    print ('car has moved')
+                    moving = True
+            elif command == 'help':
+                print('''
+start - to start the car
+stop - to stop the car
+quit - to quit
+move - to move
+                ''')
+            elif command == 'quit':
+                break
+            else:
+                print('Invalid Input')
