@@ -1,0 +1,16 @@
+gender = input(' What is your pronoun? Ex. his, her, etc. : ')
+first_name = input('First Name: ')
+last_name = input('Last Name: ')
+ans = input('Are you named after someone in your family?:       (y/n) ')
+if ans == 'n':
+    birth_order = ' First of ' + gender + ' name '
+if ans == 'y':
+    birth_order = ' Second of his name '
+career = input('What is your Career?: ')
+work_location = input('Where do you work?: ')
+location = input('Enter a Location: ')
+
+
+print(first_name + ' of House ' + last_name + birth_order)
+print(career + ' of ' + work_location)
+print('Ruler of ' + location)
